@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minhas tarefas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topo">
+      <p class="etiqueta">SEU ESPAÇO, SEU RITMO</p>
+      <h1>Minhas tarefas<span>.</span></h1>
+      <p class="subtitulo">Um passo de cada vez. O que você quer resolver hoje?</p>
+    </header>
+
+    <form id="form-tarefa" class="form-tarefa">
+      <label class="sr-only" for="campo-tarefa">Nova tarefa</label>
+      <input
+        id="campo-tarefa"
+        type="text"
+        placeholder="Escreva uma tarefa..."
+        maxlength="100"
+        autocomplete="off"
+      >
+      <button type="submit">Adicionar <span aria-hidden="true">+</span></button>
+    </form>
+
+    <section class="painel" aria-labelledby="titulo-lista">
+      <div class="painel-topo">
+        <h2 id="titulo-lista">Sua lista</h2>
+        <span id="contador" class="contador">0 tarefas</span>
+      </div>
+
+      <ul id="lista-tarefas" class="lista-tarefas" aria-live="polite"></ul>
+
+      <p id="mensagem-vazia" class="mensagem-vazia">
+        Sua lista está vazia.<br>
+        Adicione uma tarefa para começar.
+      </p>
+    </section>
+
+    <footer>Suas tarefas ficam salvas neste navegador.</footer>
+  </main>
+</body>
+</html>
